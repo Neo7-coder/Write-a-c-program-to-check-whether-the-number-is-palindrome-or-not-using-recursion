@@ -1,0 +1,23 @@
+#include <stdio.h>
+int r=0;
+int palin(int m)
+{ 
+    if(m==0)
+    return r;
+    else
+    {
+      r = r*10 + m%10;
+      return palin(m/10);
+    }
+}
+void main()
+{ int num,n;
+    printf(" enter the number to be checked \n");
+    scanf(" %d",&num);
+    n=num;
+    int new_num = palin(n);
+    if(new_num == num)
+    printf(" number is palindrome \n");
+    else 
+    printf(" number is not a palindrome \n");
+}
